@@ -2,9 +2,7 @@ var app = require('gopher'),
     twilio = require('twilio');
 
 // Twilio Webhook Middleware, shared across all Twilio webhooks
-var twebhook = twilio.webhook({
-    validate:false
-});
+var twebhook = twilio.webhook();
 
 // Handle SMS interface to the Twivia app
 app.post('/sms', twebhook, function(request, response) {
