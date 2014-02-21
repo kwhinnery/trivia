@@ -28,7 +28,7 @@ module.exports = function(request, response) {
                 player.nick = input;
                 player.save(function(err) {
                     if (err) {
-                        respond('There was a problem updating your nickname, please try again later.');
+                        respond('There was a problem updating your nickname, or that nickname is already in use. Please try another nickname.');
                     } else {
                         respond('Your nickname has been changed!');
                     }
