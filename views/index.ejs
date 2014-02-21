@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Twilio Trivia!</title>
+    <meta name="description" content="A Twilio-powered Trivia Game">
+    <meta name="author" content="Kevin Whinnery">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Galindo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+    <div class="container">
+        <div id="header" class="sixteen columns">
+            <h1 class="remove-bottom" style="margin-top: 40px">Twilio Trivia!</h1>
+            <h5>Snow*Mobile 2014</h5>
+            <hr/>
+        </div>
+        <div class="two-thirds column">
+            <h2>Current Question</h2>
+            <p><blockquote><%= question.question %></blockquote></p>
+            <p>
+                Know this one? Text <code>answer &lt;your answer&gt;</code> to:
+            </p>
+            <p class="number"><a href="sms:6087290012">(608) 729-0012</a></p>
+
+            <h4>SMS Commands</h4>
+            <p>Here is a listing of all the commands you can text to that number:</p>
+            <table>
+                <tr>
+                    <th>answer</th>
+                    <td>Text in the answer to the current question. Score more points if you're among the first to answer it! Each correct answer usually has one or two key words that are necessary to get it right. Spelling counts, but capitalization does not. Example: <br/><br/><code>answer kirby puckett</code></td>
+                </tr>
+                <tr>
+                    <th>question</th>
+                    <td>Print out the current question. Example: <br/><br/><code>question</code></td>
+                </tr>
+                <tr>
+                    <th>nick</th>
+                    <td>Change your nickname as displayed on the leaderboard. Example: <br/><br/><code>nick Mrs. Awesomepants</code></td>
+                </tr>
+                <tr>
+                    <th>score</th>
+                    <td>Check your current score. Example: <br/><br/><code>score</code></td>
+                </tr>
+                <tr>
+                    <th>help</th>
+                    <td>Text "help" to see all commands. Text "&lt;command name&gt; help" for command-specific help. Example: <br/><br/><code>help</code></td>
+                </tr>
+                <tr>
+                    <th>stop</th>
+                    <td>Unsubscribe from all messages. Example: <br/><br/><code>stop</code></td>
+                </tr>
+            </table>
+        </div>
+        <div id="sidebar" class="one-third column">
+            <h3>Leaderboard</h3>
+            <ul>
+                <% leaders.forEach(function(leader) { %>
+                    <li><%= leader.nick+': '+leader.points %></li>
+                <% }); %>
+            </ul>
+            <p>
+                <a href="http://twilio.com"><img src="/img/circle-stack.png" alt="Twilio"/></a>
+            </p>
+            <p id="footer">Powered by your pals at <a href="http://twilio.com">Twilio</a>. <a href="http://www.twilio.com/try-twilio">Start building</a> your own sweet SMS, Voice, and VoIP apps today!</p>
+        </div>
+    </div>
+</body>
+</html>

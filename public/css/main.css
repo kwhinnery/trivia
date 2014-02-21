@@ -1,0 +1,45 @@
+table {
+    margin-bottom:10px;
+}
+
+th {
+    vertical-align:middle;
+    color:#000;
+    font-weight:bold;
+    background-color:#cdcdcd;
+    padding:10px;
+    border:1px #787878 solid;
+}
+
+td {
+    padding:10px;
+    border:1px #787878 solid;
+}
+
+code {
+    font-weight:bold;
+    font-family:"Monaco", monospace;
+    color:#ff0000;
+}
+
+blockquote {
+    font-size:24px;
+}
+
+#header {
+    text-align:center;
+}
+
+#footer {
+    padding:0 20px 0 20px;
+}
+
+#sidebar {
+    text-align: center;
+}
+
+p.number {
+    font-size:24px;
+    font-weight:bold;
+    color:#000;
+}
