@@ -4,9 +4,7 @@ var twilio = require('twilio'),
 // Configure app routes
 module.exports = function(app) {
     // Twilio webhooks
-    var hook = twilio.webhook({
-        validate:false
-    }); // twilio webhook middleware
+    var hook = twilio.webhook(); // twilio webhook middleware
     app.post('/sms', hook, require('./sms'));
     app.post('/voice', hook, require('./voice'));
 
