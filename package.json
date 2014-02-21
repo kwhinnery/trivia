@@ -1,0 +1,17 @@
+{
+  "name": "trivia",
+  "version": "0.0.1",
+  "description": "A Twilio SMS-powered Trivia App!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Whinnery",
+  "license": "MIT",
+  "dependencies": {
+    "twilio": "~1.5.0",
+    "ejs": "~0.8.5",
+    "express": "~3.4.8",
+    "gopher": "0.0.5"
+  }
+}
