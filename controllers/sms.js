@@ -83,6 +83,9 @@ module.exports = function(request, response) {
                     points = 1;
                 }
 
+                // DOUBLE POINTS
+                points = points*2;
+
                 // Update the question, then the player score
                 question.answered.push(player.phone);
                 question.save(function(err) {
