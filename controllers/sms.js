@@ -150,7 +150,7 @@ module.exports = function(request, response) {
         } else if (was('score', input)) {
             score(chopped);
         } else {
-            respond('Welcome to Twilio Trivia '+player.nick+'! Commands are "answer", "question", "nick", "score", help", and "stop". Text "<command name> help" for usage. View the current leaderboard and question at http://twilio-trivia.herokuapp.com');
+            respond('Welcome to Twilio Trivia '+player.nick+'! Commands are "answer", "question", "nick", "score", help", and "stop". Text "<command name> help" for usage. View the current leaderboard and question at http://build-trivia.azurewebsites.net/');
         }
     }
 
