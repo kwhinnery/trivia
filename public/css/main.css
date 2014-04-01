@@ -97,7 +97,16 @@ p.number {
 }
 
 @media screen and (max-width: 480px) {
+
+    #header {
+        margin-top:40px;
+    }
+
     h1 {
         font-size:3em;
+    }
+
+    h5 {
+        margin-top:0;
     }
 }
