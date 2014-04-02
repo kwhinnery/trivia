@@ -1,0 +1,93 @@
+html, body {
+    height:100%;
+    width:100%;
+    background: url(/img/sf.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: middle middle;
+    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif; 
+}
+
+p {
+    line-height:1.4em;
+}
+
+header {
+    float: right;
+    text-align: right;
+    padding:20px;
+}
+
+h1 {
+    font-size:5em;
+}
+
+code {
+    font-weight:bold;
+    font-family:"Monaco", monospace;
+    color:#00BCF2;
+}
+
+blockquote {
+    font-size:24px;
+    color:#ccc;
+    line-height:1.4em;
+}
+
+.panel {
+    color:#fff;
+    padding:20px;
+    background-color:#1a1a1a;
+    margin-top:20px;
+    box-shadow: 2px 2px 2px #2b2b2b;
+    width:700px;
+    opacity:0.9;
+}
+
+.panel a, .panel a:visited, .panel b {
+    color:#00BCF2;
+}
+
+#top-bar {
+    background-color: #fff;
+    height:5px;
+}
+
+#logo {
+    margin-right:20px;
+    float:right;
+    height:200px;
+    width:200px;
+}
+
+#question, #leaders {
+    margin-left:20px;
+}
+
+p.number {
+    font-size:24px;
+    font-weight:bold;
+}
+
+.leader {
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+.place0 {
+    color:lime;
+    font-size:1.8em;
+}
+
+.place1 {
+    color:lime;
+    font-size:1.5em;
+}
+
+.place2 {
+    color:lime;
+    font-size:1.3em;
+}

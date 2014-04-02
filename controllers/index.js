@@ -22,5 +22,8 @@ module.exports = function(app) {
     app.post('/question', auth, question.create);
 
     // Game Status (Home Page)
-    app.get('/', require('./home'));
+    var home = require('./home');
+    app.get('/', home.index);
+    app.get('/display', home.display);
+    app.get('/poll', home.poll);
 };

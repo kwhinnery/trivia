@@ -13,7 +13,8 @@
     "ejs": "~0.8.5",
     "express": "~3.4.8",
     "gopher": "0.0.5",
-    "mongoose": "~3.8.7"
+    "mongoose": "~3.8.7",
+    "firebase": "~1.0.11"
   },
   "engines": {
     "node": "0.10.x"
