@@ -75,9 +75,9 @@ module.exports = function(request, response) {
             respond('You have already answered this question!');
         } else {
             var answerLower = question.answer.toLowerCase(),
-                inputLower = input.toLowerCase();
+                inputLower = input.toLowerCase().trim();
 
-            if (answerLower.indexOf(inputLower) > -1) {
+            if (inputLower !== '' && answerLower.indexOf(inputLower) > -1) {
                 var points = 5 - question.answered.length;
                 if (points < 1) {
                     points = 1;
